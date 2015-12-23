@@ -12,6 +12,6 @@
 
 展示：
 
-![友好速搭](https://asset.ibanquan.com/image/567a24840abc3e3f6600002c/s.png)
+![友好速搭](https://asset.ibanquan.com/image/567a255b0abc3e3f66000035/s.png)
 ![友好速搭](https://asset.ibanquan.com/image/567a24bd0abc3e3f6600002f/s.png)
 ![友好速搭](https://asset.ibanquan.com/image/567a24cc0abc3e3f66000032/s.png)
