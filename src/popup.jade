@@ -1,0 +1,16 @@
+doctype html
+html(lang='zh-CN')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='assets/popup.css')
+  body
+    .wrap
+      .cont.mod
+        #popup.popup
+          section.popup-info
+            span {{ msg }}
+          a.btn.btn-2nd.popup-btn(href='/index.html' target='_blank') 设置
+    script(src='assets/vendor/jquery-2.1.4.min.js')
+    script(src='assets/vendor/vue-csp.min.js')
+    script(src='assets/vendor/base64.min.js')
+    script(src='assets/popup.js')

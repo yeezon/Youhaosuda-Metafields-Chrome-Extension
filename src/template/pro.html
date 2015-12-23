@@ -1,0 +1,50 @@
+<div v-if="!err && !is_new_page" class="fw-main-item-content fw-main-item-content-full you_metas_ext-row">
+  <div class="you_metas_ext-col">
+    <div class="setting-create-way you_metas_ext-item">
+        <h2>商品类型</h2>
+        <div class="create-way-block">
+            <label class="labelmargin"><label class="check"><input type="checkbox" v-model="meta.is_buy" @change="change" class="ng-pristine ng-untouched ng-valid check-checkbox"><span class="check-fake"></span></label>购买</label>
+            <thislabel class="labelmargin"><label class="check"><input type="checkbox" v-model="meta.is_try" @change="change" class="ng-valid check-checkbox ng-dirty ng-valid-parse ng-touched"><span class="check-fake"></span></label>体验</label>
+        </div>
+    </div>
+    <div class="setting-create-way you_metas_ext-item">
+      <h2>视频</h2>
+      <div class="create-way-block">
+        <label class="labelmargin"><label class="check"><input type="checkbox" v-model="meta.is_video" @change="change" class="ng-pristine ng-untouched ng-valid check-checkbox"><span class="check-fake"></span></label>显示</label>
+      </div>
+      <div class="create-way-block">
+        <input type="text" class="input input-search ng-pristine ng-valid ng-touched" placeholder="视频地址" v-model="meta.video_src" @change="change">
+      </div>
+    </div>
+    <div class="setting-create-way you_metas_ext-item">
+        <h2>背景图<span class="theme-seo-tip ng-binding">对应最后一张橱窗图片，此图将不显示</span></h2>
+    </div>
+  </div>
+  <div class="you_metas_ext-col">
+    <div class="setting-create-way you_metas_ext-item">
+        <h2>属性描述</h2>
+        <div class="create-way-block">
+          <input class="input input-long ng-pristine ng-valid ng-valid-maxlength ng-touched" type="text" v-model="meta.attr_desc" @change="change" placeholder="请输入属性描述" maxlength="70">
+        </div>
+    </div>
+    <div class="setting-create-way you_metas_ext-item">
+        <h2>描述</h2>
+        <div class="create-way-block">
+          <textarea rows="3" class="input input-long ng-pristine ng-untouched ng-valid ng-valid-maxlength" v-model="meta.desc" @change="change" placeholder="请输入描述" style="max-height: 72px;" maxlength="128"></textarea>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div v-if="err && !is_new_page" class="fw-main-item-content fw-main-item-content-full you_metas_ext-info you_metas_ext-err">
+  <div class="setting-create-way you_metas_ext-item">
+    <span><span>请刷新页面</span><br><span>{{err}}</span></span>
+  </div>
+</div>
+
+<div v-if="!err && is_new_page" class="fw-main-item-content fw-main-item-content-full you_metas_ext-info">
+  <div class="setting-create-way you_metas_ext-item">
+    <span><span>新增商品后方可设置自定义属性</span></span>
+  </div>
+</div>
+

@@ -1,0 +1,38 @@
+{
+  "name": "Youhaosuda Metafields Extension",
+  "version": "0.0.1",
+  "description": "Youhaosuda Metafields Extension",
+  "manifest_version": 2,
+  "icons": {
+    "16": "assets/img/icon.png",
+    "48": "assets/img/icon.png",
+    "128": "assets/img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "index.html",
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/center/main/*"
+      ],
+      "css": [
+        "assets/main.css"
+      ],
+      "js": [
+        "assets/vendor/vue.min.js",
+        "assets/main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "https://api.youhaosuda.com/*",
+    "https://apps.youhaosuda.com/*"
+  ]
+}

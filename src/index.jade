@@ -1,0 +1,20 @@
+doctype html
+html(lang='zh-CN')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='assets/index.css')
+  body
+    .wrap
+      .cont.mod
+        #index.index
+          section.index-info
+            span {{ msg }}
+          section.index--ipt_box(v-show='!oBind.bind')
+            input.ipt-text.index-key(v-model='oBind.app_key' placeholder='App Key')
+            input.ipt-text.index-secret(v-model='oBind.shared_secret' placeholder='Shared Secret')
+          button.btn.btn-2nd(v-show='oBind.bind' v-on:click='fnUnbind') 解除绑定
+          button.btn.btn-2nd(v-show='!oBind.bind' v-on:click='fnBind') 绑定
+    script(src='assets/vendor/jquery-2.1.4.min.js')
+    script(src='assets/vendor/vue-csp.min.js')
+    script(src='assets/vendor/base64.min.js')
+    script(src='assets/index.js')
